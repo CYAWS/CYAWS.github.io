@@ -4,14 +4,21 @@ theme: next
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: RonBaw
+subtitle: '辉禾'
+description: '记录学习'
 keywords:
-author: John Doe
+author: 辉禾
 language: zh-Hans
-timezone: ''
+timezone: 'UTC'
 
+symbols_count_time:
+#文章内是否显示
+  symbols: true
+  time: true
+# 网页底部是否显示
+  total_symbols: true
+  total_time: true
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com

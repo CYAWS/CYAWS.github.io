@@ -14,6 +14,11 @@
 # Useful if you don't want to inherit the theme _config.yml configurations.
 override: false
 
+codeblock:
+  copy_button:
+    enable: false      # 增加复制按钮的开关
+    show_result: false # 点击复制完后是否显示 复制成功 结果提示
+
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
@@ -92,14 +97,14 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /
-  #about: /about/ || user
-  tags: /tags
-  categories: /categories
-  archives: /archives
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  commonweal: /404
+  home: / || home #首页
+  about: /about/ || user #关于
+  #tags: /tags/ || tags #标签
+  categories: /categories/ || th #分类
+  archives: /archives/ || archive #归档
+  #schedule: /schedule/ || calendar #日程表
+  #sitemap: /sitemap.xml || sitemap #站点地图
+  #commonweal: /404/ || heartbeat #公益404
 
 
 # Enable/Disable menu icons.
@@ -222,7 +227,7 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
-  item_text: true
+  item_text: false
   created_at: true
   updated_at: false
   categories: true
@@ -672,9 +677,20 @@ motion:
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 
+symbols_count_time:
+  separated_meta: true  # false会显示一行
+  item_text_post: true  # 显示属性名称,设为false后只显示图标和统计数字,不显示属性的文字
+  item_text_total: true # 底部footer是否显示字数统计属性文字
+  awl: 4                # 计算字数的一个设置,没设置过
+  wpm: 275              # 一分钟阅读的字数
+
 # Fancybox
 fancybox: true
-
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: true       # 默认显示版权信息
+  language:
 # Progress bar in the top during page loading.
 pace: false
 # Themes list:
