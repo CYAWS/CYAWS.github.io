@@ -14,11 +14,6 @@
 # Useful if you don't want to inherit the theme _config.yml configurations.
 override: false
 
-codeblock:
-  copy_button:
-    enable: false      # 增加复制按钮的开关
-    show_result: false # 点击复制完后是否显示 复制成功 结果提示
-
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
@@ -50,7 +45,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2022/1/22
+  since: 2022
 
   # Icon between year and copyright info.
   icon: user
@@ -97,15 +92,14 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /|| home #首页
-  #about: /about/|| user #关于
-  #tags: /tags/|| tags #标签
-  categories: /categories/|| th #分类
-  archives: /archives/|| archive #归档
-  #schedule: /schedule/|| calendar #日程表
-  #sitemap: /sitemap.xml|| sitemap #站点地图
-  #commonweal: /404/|| heartbeat #公益404
-
+  home: /|| home
+  #about: /about/|| user
+  #tags: /tags/|| tags
+  categories: /categories/|| th
+  archives: /archives/|| archive
+  #schedule: /schedule/|| calendar
+  #sitemap: /sitemap.xml|| sitemap
+  #commonweal: /404/|| heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -117,7 +111,7 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Mist
+#scheme: Muse
 scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
@@ -127,14 +121,15 @@ scheme: Mist
 # Sidebar Settings
 # ---------------------------------------------------------------
 
-# Social Links.
+# Social Links
 # Usage: `Key: permalink || icon`
-# Key is the link label showing to end users.
-# Value before `||` delimeter is the target permalink.
-# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
+# Key 是向最终用户显示的链接标签.
+# `||` 分隔符之前的值是目标的永久链接.
+# `||` 分隔符后面的值是FontAwesome图标的名称。如果未指定图标（带或不带分隔符），则将加载globe图标.
+social:
   #GitHub: https://github.com/yourname || github
-  E-Mail: mailto:2437539207x@gmail.com || envelope
+  E-Mail: 2437539207x@gmail.com || envelope
+  #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -145,8 +140,11 @@ scheme: Mist
   #Skype: skype:yourname?call|chat || skype
 
 social_icons:
+  # 是否启用社交链接图标
   enable: true
+  # 是否只显示社交链接图标
   icons_only: false
+  # 是否显示具有转换效果的社交链接图标
   transition: false
 
 # Blog rolls
@@ -227,7 +225,7 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
-  item_text: false
+  item_text: true
   created_at: true
   updated_at: false
   categories: true
@@ -555,7 +553,7 @@ firestore:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: true
+  enable: false
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -677,20 +675,9 @@ motion:
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 
-symbols_count_time:
-  separated_meta: true  # false会显示一行
-  item_text_post: true  # 显示属性名称,设为false后只显示图标和统计数字,不显示属性的文字
-  item_text_total: true # 底部footer是否显示字数统计属性文字
-  awl: 4                # 计算字数的一个设置,没设置过
-  wpm: 275              # 一分钟阅读的字数
-
 # Fancybox
 fancybox: true
-creative_commons:
-  license: by-nc-sa
-  sidebar: false
-  post: true       # 默认显示版权信息
-  language:
+
 # Progress bar in the top during page loading.
 pace: false
 # Themes list:
